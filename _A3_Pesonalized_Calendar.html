@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Display pictures of love ones ,mark birthday months & elevate your space with a personalized wall calendar – a daily dose of inspiration!">
+  <title>Pesonalized_Calendar</title>
+  
+  <!-- HTML -->
+  
+
+
+<link rel= "Shortcut icon" type="x-icon" href= "https://i.postimg.cc/XqrhcVpD/20240702-095704.png">
+
+
+ <link href="https://fonts.google.com/share?selection.family=Jersey+25|Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <!-- Custom Styles -->
+<link rel="stylesheet" href="css/catalog.css
+    "> 
+<link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/picture.css
+    ">
+  
+    <link rel="stylesheet" href="css/Product.css
+    ">
+    
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RJSDSSVMM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9RJSDSSVMM');
+</script>
+  
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MNW5B4W9');</script>
+<!-- End Google Tag Manager -->
+
+      <!-- linked pages-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+         <script>
+        $(function(){
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+     <script>
+        $(function(){
+            $("#Whatsapp_button").load("whatsApp_button.html");
+        });
+    </script>
+    <script>
+        $(function(){
+            $("#footer").load("footer.html");
+        });
+    </script>
+      <!-- Set Product -->
+        <script>
+        $(function(){
+            $("#tote_bag").load("Set_tote_bag.html");
+        });
+</script>
+        <script>
+        $(function(){
+            $("#Pillow_Case").load("Set_Pillow_Case.html");
+        });
+</script>
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleMessage = document.getElementById('toggleMessage');
+            const messageFields = document.getElementById('messageFields');
+
+            toggleMessage.addEventListener('change', () => {
+                if (toggleMessage.value === 'yes') {
+                    messageFields.classList.remove('hidden');
+                } else {
+                    messageFields.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="container2">
+ <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+
+    <!-- Nav -->
+    <nav class="main-nav">
+          <h1 alt="Microsoft" class="logo">
+             <i class="fas fa-arrow-left back-button" onclick="goBack()"></i>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+&nbsp;2025 Calendar</h1>
+
+
+
+
+       <div id="navbar"></div>
+</div>
+
+  <div class="container5">
+    <div class="images5">
+      <div class="image5"><img src="https://i.postimg.cc/V64xzvvK/1.jpg" alt="Image 1"></div>
+      <div class="image5"><img src="https://i.postimg.cc/sf6k8MtX/2.jpg" alt="Image 2"></div>
+      <div class="image5"><img src="https://i.postimg.cc/x8CW8Qbn/4.jpg" alt="Image 3"></div>
+      <div class="image5"><img src="https://i.postimg.cc/dthbKqY9/3.jpg" alt="Image 4"></div>
+  <div class="image5"><img src="https://i.postimg.cc/Gt56sfkY/5.jpg" alt="Image 5"></div>
+  </div>
+    <div class="arrow left" onclick="slide(-1)">&lt;</div>
+  <div class="arrow right" onclick="slide(1)">&gt;</div>
+</div>
+    </div>
+
+  <div class="counter"></div>
+
+  <script>
+   let currentIndex = 0;
+    const images = document.querySelectorAll('.image5');
+    const counter = document.querySelector('.counter');
+    let startX = 0;
+
+    function updateCounter() {
+      counter.textContent = `${currentIndex + 1} / ${images.length}`;
+    }
+
+    function slide(direction) {
+      currentIndex = currentIndex + direction;
+      if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+      } else if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+      const offset = -currentIndex * 100;
+      document.querySelector('.images5').style.transform = `translateX(${offset}%)`;
+      updateCounter();
+    }
+
+    document.querySelector('.container5').addEventListener('touchstart', (event) => {
+      startX = event.touches[0].clientX;
+    });
+
+    document.querySelector('.container5').addEventListener('touchend', (event) => {
+      const endX = event.changedTouches[0].clientX;
+      const diff = startX - endX;
+      if (diff > 50) {
+        slide(1); // Slide right
+      } else if (diff < -50) {
+        slide(-1); // Slide left
+      }
+    });
+
+    updateCounter(); // Initial counter update
+  </script>
+
+ <div class="container slider-column">
+<div class="top-section">
+  
+<div class="icon-container">
+    <span id="heart" class="heart" onclick="toggleLike()">
+        <i id="heartIcon" class="far fa-heart"></i>
+    </span>
+  
+
+    <div id="share" class="share-icon">
+        <i class="fas fa-share"></i>
+
+    </div>
+</div>
+ <div class="numbers">
+<span id="likes">Likes: 1</span><span id="likeCount">0</span>
+
+<script>
+    document.getElementById('likes').style.color = 'gray';
+</script>
+</div>
+<script>
+let liked = false;
+let likeCount = 3; // Set the initial like count here
+const userId = 'user99'; // Replace this with a dynamic unique identifier for each user
+const uniqueKey = `heartLikeStatus_${userId}`;
+
+// Restore like status from local storage
+function restoreLikeStatus() {
+    const storedLiked = localStorage.getItem(uniqueKey + '.liked');
+    const storedLikeCount = localStorage.getItem(uniqueKey + '.likeCount');
+
+    if (storedLiked === 'true') {
+        liked = true;
+        likeCount = parseInt(storedLikeCount, 10) || likeCount; // Use stored count or initial count
+        document.getElementById('heart').classList.add("liked");
+    } else {
+        likeCount = parseInt(storedLikeCount, 10) || likeCount; // Use stored count or initial count
+    }
+
+    // Increase the like count by 4 every page load
+    likeCount += 0;
+
+    // Update the displayed like count
+    document.getElementById('likeCount').textContent = likeCount;
+
+    // Save the updated like count to local storage
+    localStorage.setItem(uniqueKey + '.likeCount', likeCount);
+}
+
+// Toggle like status
+function toggleLike() {
+    liked = !liked;
+    likeCount += liked ? 1 : -1;
+    const heart = document.getElementById('heart');
+    heart.classList.toggle('liked', liked);
+    document.getElementById('likeCount').textContent = likeCount;
+
+    // Save state to local storage
+    localStorage.setItem(uniqueKey + '.liked', liked);
+    localStorage.setItem(uniqueKey + '.likeCount', likeCount);
+}
+
+// Restore like status on page load
+window.onload = restoreLikeStatus;
+</script>
+</div>
+  <script>
+document.getElementById('share').addEventListener('click', function() {
+    // Replace the placeholder URL and description with the actual values you want to share
+    var url = encodeURIComponent('https://fumstudio.shop/_A3_Pesonalized_Calendar.html');
+    var description = encodeURIComponent('Display pictures of love ones ,mark birthday months & elevate your space with a personalized wall calendar – a daily dose of inspiration!♥️');
+    window.open('https://api.whatsapp.com/send?text=' + description + '%0A' + url, '_blank');
+});
+</script>
+<div class="top-section">
+    <div class="p-4">
+  <p>A. 5 Photos <span class="price" data-price="139.99">
+    ZAR 139.99
+</span> </p>
+
+   <p>B. 6-10 Photos <span class="price" data-price="159.99">
+    ZAR 159.99
+</span> </p>  
+   <p>C. 11-15 Photos <span class="price" data-price="179.99">
+    ZAR 179.99
+</span> </p>
+        <span class="free-shipping">Free Shipping ,SA</span>
+        <p>3-7 business days.</p>
+        </div>
+                <p>Display pictures of love ones ,mark birthday months & elevate your space with a personalized wall calendar – a daily dose of inspiration!</p>
+    <span class="clickable" onclick="toggleDetails()">Details</span>
+    <div class="details" id="details">
+    <div class="space">
+       <p>Calendar size: A3, pictures & name,
+     Laminated ,4 Wall stickers.</p>
+
+        
+    </div>
+        </div>
+  <br>
+  
+<button id="orderButton">ORDER NOW</button>
+
+
+        </div>
+
+            
+
+
+<form id="orderForm">
+   <p>Click on the image you like the most:<p>
+<br>
+<div id="images">
+    <label class="image-container">
+        <input type="checkbox" name="option" value="https://i.postimg.cc/kXFFptWv/Untitled-design-5.jpg" onchange="updateCheckboxes(this)" checked>
+        <img src="https://i.postimg.cc/kXFFptWv/Untitled-design-5.jpg" alt="Photo Bracelet">
+
+    </label>
+    <label class="image-container">
+        <input type="checkbox" name="option" value="https://i.postimg.cc/J7sNM2Z0/Untitled-design-4.jpg" onchange="updateCheckboxes(this)">
+        <img src="https://i.postimg.cc/J7sNM2Z0/Untitled-design-4.jpg" alt="Like Image">
+
+    </label>
+     <label class="image-container">
+        <input type="checkbox" name="option" value="https://i.postimg.cc/2Sy4zFFs/3.jpg" onchange="updateCheckboxes(this)">
+        <img src="https://i.postimg.cc/2Sy4zFFs/3.jpg" alt="Like Image">
+        <a href="private_link2" style="display: none;">Private Link 2</a>
+                    </label></label>
+    </label>
+    <label class="image-container">
+        <input type="checkbox" name="option" value="https://i.postimg.cc/bv2kny5L/4.jpg" onchange="updateCheckboxes(this)">
+        <img src="https://i.postimg.cc/bv2kny5L/4.jpg" alt="Like Image">
+
+    </label>
+    <label class="image-container">
+        <input type="checkbox" name="option" value="https://i.postimg.cc/G2wYx0wR/5.jpg" onchange="updateCheckboxes(this)">
+        <img src="https://i.postimg.cc/G2wYx0wR/5.jpg" alt="Like Image">
+
+    </label>
+    <label class="image-container">
+        <input type="checkbox" name="option" value="https://i.postimg.cc/26QWHHrZ/6.jpg" onchange="updateCheckboxes(this)">
+        <img src="https://i.postimg.cc/26QWHHrZ/6.jpg" alt="Like Image">
+
+    </label>
+
+</div>
+
+  <!-- Add more image containers with checkboxes, images, text, and private links as needed -->
+        <label for="cover-options">Select the number of photos:</label>
+    <select id="cover-options">
+        <option value="A. 5 Photos">A. 5 Photos</span></option>
+        
+        <option value="B.  6-10 Photos">B. 6-10 Photos</span></option>
+        
+   <option value="C. 11-15 Photos">C. 11-15Photos</span></option>
+   
+
+    </select>
+
+<label for="toggleMessage">Would you like to add a name or message in a calendar ?</label>
+    <select id="toggleMessage">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select>
+
+    <div id="messageFields" class="hidden">
+
+  
+
+<textarea id="additional-message" placeholder="Write a name in the calendar, eg.Mpemba"></textarea>
+</div>
+  <button onclick="submitImages()">Submit</button>
+
+</form>
+<script>
+function updateCheckboxes(checkbox) {
+    var checkboxes = document.getElementsByName('option');
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] !== checkbox) {
+            checkboxes[i].checked = false;
+        }
+    }
+}
+
+function submitImages() {
+    const selectedMessages = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(checkbox => checkbox.value);
+    const additionalMessage = document.getElementById('additional-message').value.trim() || "none"; // Default to "none" if empty
+    const selectedOption = document.getElementById('cover-options').value || "none"; // Default to "none" if nothing selected
+    const catalogLink = 'View Catalog: https://fumstudio.shop/_A3_Pesonalized_Calendar.html';
+    
+    const message = catalogLink +
+        "\n\nSelected Pictures: " + selectedOption + // Include selected option in the message
+        "\nSelected design: " + (selectedMessages.length > 0 ? selectedMessages.join("\n") : "none") + // Default to "none" if no messages
+        "\nName or Massage: " + additionalMessage +
+        "\n\n* Hi, send us your chosen photos on WhatsApp.*\n\n" +
+        "* The agent will review your orders & assist with payments.*\n\n" +
+        "* Visit the website to make more orders and submit your address.*\n\n" +
+        "*fumstudio.shop*";
+
+    const whatsappNumber = '0659860276'; // Update this with your WhatsApp number
+    const formattedMessage = encodeURIComponent(message);
+    
+    window.open(`https://wa.me/${whatsappNumber}?text=${formattedMessage}`, "_blank");
+}
+</script>
+
+<p id="like" class="like">You might also like</p>
+    <div class="scroll-indicator">
+
+<div class="container3">
+
+  <div class="product">
+
+ <div id="tote_bag"></div>
+</div>
+        
+ 
+
+<div class="product">
+
+ <div id="Pillow_Case"></div>
+</div>
+
+ </div>
+  
+ 
+
+    </div>
+ </div>
+ </div>   <div id="Whatsapp_button"></div>
+       <div id="footer"></div>
+
+  </div>  </div>  </div>  </div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script><script  src="js/script.js"></script>
+ <script src="details_&amp;_button_slide.js"></script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNW5B4W9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+ <script src="js/main.js"></script>
